@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Mzt-FD-2LC">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Mzt-FD-2LC">
                                 <rect key="frame" x="60" y="184" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -25,31 +25,29 @@
                                     <constraint firstAttribute="height" constant="200" id="sLQ-MD-YS3"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMa-Qp-9X6">
-                                <rect key="frame" x="137" y="392" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ry0-GC-YjW" kind="push" identifier="showPlaylistDetail" id="B5U-i8-3vK"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="Mzt-FD-2LC" secondAttribute="centerY" id="7CR-C1-j52"/>
-                            <constraint firstItem="AMa-Qp-9X6" firstAttribute="top" secondItem="Mzt-FD-2LC" secondAttribute="bottom" constant="8" id="W5i-fH-E80"/>
                             <constraint firstAttribute="centerX" secondItem="Mzt-FD-2LC" secondAttribute="centerX" id="djQ-Tb-Wgg"/>
-                            <constraint firstAttribute="centerX" secondItem="AMa-Qp-9X6" secondAttribute="centerX" id="j4X-gr-ZN4"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="YaG-wl-aGH" appends="YES" id="Fjn-tZ-sl8"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="RsN-Gv-R1P"/>
                     <connections>
-                        <outlet property="aButton" destination="AMa-Qp-9X6" id="xfS-L8-Yvr"/>
                         <outlet property="playlistImageView0" destination="Mzt-FD-2LC" id="Fba-Cn-724"/>
+                        <segue destination="Ry0-GC-YjW" kind="push" identifier="showPlaylistDetailSegue" id="Jme-X5-GOT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YaG-wl-aGH">
+                    <connections>
+                        <action selector="showPlaylistDetail:" destination="vXZ-lx-hvc" id="XFA-2m-GCL"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="552" y="299"/>
         </scene>
@@ -71,33 +69,6 @@
                                     <constraint firstAttribute="width" secondItem="Gnf-MZ-EBI" secondAttribute="height" multiplier="32:29" id="nkN-KM-vB7"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-Q4-SOE">
-                                <rect key="frame" x="0.0" y="234" width="320" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-Pp-uir">
-                                        <rect key="frame" x="20" y="10" width="114" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Out-yG-wEy">
-                                        <rect key="frame" x="20" y="38" width="280" height="43"/>
-                                        <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.</string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="i7m-Pp-uir" firstAttribute="top" secondItem="Lcp-Q4-SOE" secondAttribute="top" constant="10" id="JM5-2g-0ps"/>
-                                    <constraint firstItem="i7m-Pp-uir" firstAttribute="leading" secondItem="Lcp-Q4-SOE" secondAttribute="leading" constant="20" id="JVS-7U-Ieg"/>
-                                    <constraint firstAttribute="trailing" secondItem="Out-yG-wEy" secondAttribute="trailing" constant="20" id="KLZ-V6-Zze"/>
-                                    <constraint firstItem="Out-yG-wEy" firstAttribute="top" secondItem="i7m-Pp-uir" secondAttribute="bottom" constant="8" id="Pat-vj-vkq"/>
-                                    <constraint firstAttribute="width" secondItem="Lcp-Q4-SOE" secondAttribute="height" multiplier="8:3" id="VQ1-DZ-VLw"/>
-                                    <constraint firstItem="Out-yG-wEy" firstAttribute="leading" secondItem="Lcp-Q4-SOE" secondAttribute="leading" constant="20" id="bh7-c8-dTn"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9b-CR-w2q">
                                 <rect key="frame" x="20" y="374" width="46" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
@@ -140,6 +111,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lcp-Q4-SOE">
+                                <rect key="frame" x="0.0" y="264" width="320" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Goes Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-Pp-uir">
+                                        <rect key="frame" x="20" y="10" width="114" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Out-yG-wEy">
+                                        <rect key="frame" x="20" y="38" width="280" height="43"/>
+                                        <string key="text">This is a collection of my favorite songs to listen to when working out. It's got everything from fast cardio to power workout tunes. All the right fuel to get your engine going.</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="i7m-Pp-uir" firstAttribute="top" secondItem="Lcp-Q4-SOE" secondAttribute="top" constant="10" id="JM5-2g-0ps"/>
+                                    <constraint firstItem="i7m-Pp-uir" firstAttribute="leading" secondItem="Lcp-Q4-SOE" secondAttribute="leading" constant="20" id="JVS-7U-Ieg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Out-yG-wEy" secondAttribute="trailing" constant="20" id="KLZ-V6-Zze"/>
+                                    <constraint firstItem="Out-yG-wEy" firstAttribute="top" secondItem="i7m-Pp-uir" secondAttribute="bottom" constant="8" id="Pat-vj-vkq"/>
+                                    <constraint firstAttribute="width" secondItem="Lcp-Q4-SOE" secondAttribute="height" multiplier="8:3" constant="80" id="VQ1-DZ-VLw"/>
+                                    <constraint firstItem="Out-yG-wEy" firstAttribute="leading" secondItem="Lcp-Q4-SOE" secondAttribute="leading" constant="20" id="bh7-c8-dTn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882" green="0.1843137255" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
