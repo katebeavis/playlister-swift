@@ -14,6 +14,8 @@
 		BE5921851B2DDCCD0053A763 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE5921831B2DDCCD0053A763 /* LaunchScreen.xib */; };
 		BE5921911B2DDCCE0053A763 /* PlaylisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5921901B2DDCCE0053A763 /* PlaylisterTests.swift */; };
 		BE59219B1B2DE2810053A763 /* PlaylistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59219A1B2DE2810053A763 /* PlaylistDetailViewController.swift */; };
+		BE59219D1B2ED0420053A763 /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59219C1B2ED0420053A763 /* MusicLibrary.swift */; };
+		BE59219F1B2ED3C00053A763 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE59219E1B2ED3C00053A763 /* Playlist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		BE59218F1B2DDCCE0053A763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE5921901B2DDCCE0053A763 /* PlaylisterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylisterTests.swift; sourceTree = "<group>"; };
 		BE59219A1B2DE2810053A763 /* PlaylistDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistDetailViewController.swift; sourceTree = "<group>"; };
+		BE59219C1B2ED0420053A763 /* MusicLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		BE59219E1B2ED3C00053A763 /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				BE59217C1B2DDCCD0053A763 /* PlaylistMasterViewController.swift */,
 				BE59219A1B2DE2810053A763 /* PlaylistDetailViewController.swift */,
 				BE59217E1B2DDCCD0053A763 /* Main.storyboard */,
+				BE59219C1B2ED0420053A763 /* MusicLibrary.swift */,
+				BE59219E1B2ED3C00053A763 /* Playlist.swift */,
 				BE5921811B2DDCCD0053A763 /* Images.xcassets */,
 				BE5921831B2DDCCD0053A763 /* LaunchScreen.xib */,
 				BE5921781B2DDCCD0053A763 /* Supporting Files */,
@@ -218,6 +224,8 @@
 				BE59219B1B2DE2810053A763 /* PlaylistDetailViewController.swift in Sources */,
 				BE59217D1B2DDCCD0053A763 /* PlaylistMasterViewController.swift in Sources */,
 				BE59217B1B2DDCCD0053A763 /* AppDelegate.swift in Sources */,
+				BE59219D1B2ED0420053A763 /* MusicLibrary.swift in Sources */,
+				BE59219F1B2ED3C00053A763 /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
