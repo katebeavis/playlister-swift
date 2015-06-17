@@ -4,14 +4,10 @@ An iOS app written in Swift that allows the user to choose from a variety of dif
 This was my second foray into the Swift language in which I learnt about the different navigational styles, data models, structs, how to connect the views with Segues and how to make use of touch gestures, all of which were incorporated into my app.
 
 ##Screenshots
-<div>
-  <img width="25%" src="main-view.png">
-</div>
-<div">
-  <img width="25%" src="coffee-list.png">
-</div>
-<div>
-  <img width="25%" src="runner-list.png">
+<div align="center">
+  <img width="45%" src="main-view.png">
+  <img width="45%" src="coffee-list.png">
+  <img width="45%" src="runner-list.png">
 </div>
 
 ##Technology
