@@ -5,13 +5,13 @@ This was my second foray into the Swift language in which I learnt about the dif
 
 ##Screenshots
 <div align="center">
-  <img width="40%" src="main-view.png">
+  <img width="25%" src="main-view.png">
 </div>
 <div align="center">
-  <img width="40%" src="coffee-list.png">
+  <img width="25%" src="coffee-list.png">
 </div>
 <div align="center">
-  <img width="40%" src="runner-list.png">
+  <img width="25%" src="runner-list.png">
 </div>
 
 ##Technology
