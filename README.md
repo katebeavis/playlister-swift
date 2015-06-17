@@ -5,9 +5,9 @@ This was my second foray into the Swift language in which I learnt about the dif
 
 ##Screenshots
 <div align="center">
-  <img width="45%" src="main-view.png">
-  <img width="45%" src="coffee-list.png">
-  <img width="45%" src="runner-list.png">
+  <img width="30%" src="main-view.png">
+  <img width="30%" src="coffee-list.png">
+  <img width="30%" src="runner-list.png">
 </div>
 
 ##Technology
